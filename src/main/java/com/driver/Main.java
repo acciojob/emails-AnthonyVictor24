@@ -17,6 +17,12 @@ public class Main {
         gmail.receiveMail(new SimpleDateFormat("dd/MM/yyyy").parse("22/12/2022"), "Abhishek", "Assignment to be uploaded on database.");
         gmail.receiveMail(new SimpleDateFormat("dd/MM/yyyy").parse("23/12/2022"), "Tushar", "Everything looks good.");
 
+//        for(Mail m : gmail.InboxMailsList){
+//            System.out.println(m);
+//        }
+//        for(TrashMail t : gmail.trashList){
+//            System.out.println(t);
+//        }
         System.out.println("Total " + gmail.getInboxSize() + " mails in inbox.");
         System.out.println("There are " + gmail.findMailsBetweenDates(new SimpleDateFormat("dd/MM/yyyy").parse("21/12/2022"), new SimpleDateFormat("dd/MM/yyyy").parse("22/12/2022")) + " mails between given dates!");
         gmail.deleteMail("Everything looks good.");
@@ -33,6 +39,16 @@ public class Main {
         workspace.addMeeting(new Meeting(LocalTime.parse("13:30"), LocalTime.parse("18:00")));
         workspace.addMeeting(new Meeting(LocalTime.parse("18:20"), LocalTime.parse("19:10")));
         workspace.addMeeting(new Meeting(LocalTime.parse("19:50"), LocalTime.parse("21:05")));
+//        for(Meeting m : workspace.getCalendar()){
+//            System.out.println(m);
+//        }
+//        System.out.println("By sorting");
+//        workspace.findMaxMeetings();
+//        for(Meeting m : workspace.getCalendar()){
+//            System.out.println(m);
+//        }
+//        System.out.println();
+
         System.out.println("Maximum meetings you can attend in a day is " + workspace.findMaxMeetings());
     }
 }
